@@ -1,1 +1,1 @@
-# Control-2-Miner-a-de-Datos
+# Control-2-Mineria-de-Datos
