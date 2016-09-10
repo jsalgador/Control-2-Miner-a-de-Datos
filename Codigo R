@@ -1,0 +1,47 @@
+f1<-function(x=Secuencia,y=Busqueda){
+  x[x==y]<- NA
+  return(x)
+}
+  
+f2<-function(x=Vector,y=Entero){
+  y%in%x
+}
+
+f3<-function(a,b,c){
+  if(abs(a)<1){
+    "No es cuadratico"
+  }
+  else if(4*a*c>b^2){
+    "Posee raices complejas"
+  }
+  else{
+    x1<-(-b+sqrt(b^2-4*a*c))/(2*a)
+    x2<-(-b-sqrt(b^2-4*a*c))/(2*a)
+    cat("x1 =",x1,"\n")
+    cat("x2 =",x2)
+  }
+}
+
+f4<-function(x=Vector,y=Entero){
+  if(is.numeric(y)==FALSE){
+    "Ingrese un valor válido"
+  }
+  else{
+  a<-table(x)
+  a[names(a)==y]
+  }
+}
+
+f5<-function(x=Vector){
+  a<-mean(x)
+  b<-sd(x)
+  cat("Media =",a,"\n")
+  cat("Desv. Estándar =",b)
+}
+
+f6<-function(x=numero){
+  a<-seq_len(x)
+  b<-c(1,x)
+  a<-a[x%%a==0]
+  return(a[!a %in% b])
+}
